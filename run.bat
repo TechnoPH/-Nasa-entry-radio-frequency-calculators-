@@ -1,1 +1,1 @@
-venv\Scripts\activate && set FLASK_APP=application.py && set FLASK_ENV=development && set FLASK_DEBUG=true && py -m flask run &
+venv\Scripts\activate && set FLASK_APP=application.py && set FLASK_ENV=development && set FLASK_DEBUG=true && python -m flask run &
