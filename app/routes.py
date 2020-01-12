@@ -18,17 +18,8 @@ from werkzeug.exceptions import HTTPException
 from werkzeug.urls import url_parse
 from werkzeug.utils import secure_filename
 
-engine = create_engine(Config.SQLALCHEMY_DATABASE_URI, echo=True)
-Session = sessionmaker(bind=engine)
-
 
 logging.basicConfig(level=logging.DEBUG)
-
-
-@app.before_first_request
-def create_database():
-    db.create_all()
-    db.session.commit()
 
 @app.route("/")
 @app.route("/index", methods=["GET"])
